@@ -8,4 +8,4 @@ This is a preview of "The Littlest Book of Software Modernization Strategies - A
 
 ## License
 
-Not decided yet. Probably hybrid. Book all rights reserved, but website with patterns CC-BY 4.0.
+The website's content and the poster version are licensed under [Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/).
