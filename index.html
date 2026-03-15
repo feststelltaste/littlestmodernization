@@ -89,11 +89,15 @@
             overflow: hidden;
             padding: 16px;
             align-items: flex-start;
+            flex-wrap: wrap;
         }
         .poster-card-left {
             flex-shrink: 0;
             width: 240px;
             text-align: center;
+        }
+        @media (max-width: 600px) {
+            .poster-card-left { width: 100%; }
         }
         .poster-card-left img {
             width: 100%;
@@ -796,7 +800,7 @@
         </div>
 
         <h2 id="book">Book</h2>
-        <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
             <a href="https://leanpub.com/littlestmodernization/" style="flex-shrink:0;"><img src="cover_en.png" alt="Book Cover" style="width:180px; border-radius:4px; border:1px solid #ddd;"></a>
             <div><p>This overview is a sneak peek into my new book <a href="https://leanpub.com/littlestmodernization/">"The Littlest Book of Software Modernization Strategies – 32 approaches to revitalize and right-size your legacy system according to business needs"</a>, which hopefully will be available on leanpub.com soon!</p><p>The book gives you in-depth explanations for each strategy, real-world case studies, practical implementation considerations, honest counterarguments, and the occasional fun aside.</p></div>
         </div>

@@ -89,11 +89,15 @@
             overflow: hidden;
             padding: 16px;
             align-items: flex-start;
+            flex-wrap: wrap;
         }
         .poster-card-left {
             flex-shrink: 0;
             width: 240px;
             text-align: center;
+        }
+        @media (max-width: 600px) {
+            .poster-card-left { width: 100%; }
         }
         .poster-card-left img {
             width: 100%;
@@ -796,7 +800,7 @@
         </div>
 
         <h2 id="book">Buch</h2>
-        <div style="display:flex; gap:24px; align-items:flex-start;">
+        <div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
             <a href="https://leanpub.com/kleinemodernisierung/" style="flex-shrink:0;"><img src="cover_de.png" alt="Book Cover" style="width:180px; border-radius:4px; border:1px solid #ddd;"></a>
             <div><p>Diese Übersicht ist ein Vorgeschmack auf mein neues Buch <a href="https://leanpub.com/kleinemodernisierung/">"Das kleine Buch der Softwaremodernisierungsstrategien – 32 Ansätze, um Legacy-Systeme zu revitalisieren und gezielt an neue Business-Anforderungen anzupassen"</a>, das hoffentlich bald auf leanpub.com erhältlich sein wird!</p><p>Im Buch findest du zu jeder Strategie ausführliche Erklärungen, echte Fallstudien aus der Praxis, konkrete Umsetzungshinweise, ehrliche Gegenargumente und die ein oder andere unterhaltsame Randbemerkung.</p></div>
         </div>
