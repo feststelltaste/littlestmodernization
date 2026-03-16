@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Modernization Strategies</title>
+    <meta property="og:title" content="Software Modernization Strategies">
+    <meta property="og:description" content="32 approaches to revitalize and right-size your legacy system according to business needs">
+    <meta property="og:image" content="https://feststelltaste.github.io/littlestmodernization/modernizationstrategies_overview.png">
+    <meta property="og:url" content="https://feststelltaste.github.io/littlestmodernization/en/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Software Modernization Strategies">
+    <meta name="twitter:description" content="32 approaches to revitalize and right-size your legacy system according to business needs">
+    <meta name="twitter:image" content="https://feststelltaste.github.io/littlestmodernization/modernizationstrategies_overview.png">
+    <style>
+        body { font-family: Open Sans, sans-serif; margin: 0; padding: 20px; background: #fff; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { text-align: center; color: #black; margin-bottom: 30px; hyphens: auto; }
+        .category { margin-bottom: 40px; }
+        .category-header {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .strategy-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid;
+        }
+        .strategy-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .strategy-emoji { font-size: 24px; }
+        .strategy-description { color: #000; line-height: 1.4; hyphens: auto; }
+        .strategy-definition { color: #888; font-size: 0.82em; line-height: 1.4; margin-top: 8px; hyphens: auto; }
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .style-switcher, .lang-switcher {
+            font-size: 0.9em;
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .style-switcher a, .lang-switcher a {
+            text-decoration: none;
+            color: #555;
+            padding: 4px 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .style-switcher a:hover, .lang-switcher a:hover {
+            background: #f0f0f0;
+        }
+        .style-switcher a.active, .lang-switcher a.active {
+            border-color: #999;
+            background: #f0f0f0;
+            color: #000;
+            font-weight: bold;
+            cursor: default;
+            pointer-events: none;
+        }
+        .poster-list {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin: 24px 0;
+        }
+        .poster-card {
+            display: flex;
+            gap: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 16px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+        .poster-card-left {
+            flex-shrink: 0;
+            width: 240px;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .poster-card-left { width: 100%; }
+        }
+        .poster-card-left img {
+            width: 100%;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .poster-card-right {
+            flex: 1;
+        }
+        .poster-card-title {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 6px;
+        }
+        .poster-card-desc {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.4;
+            margin-bottom: 0;
+        }
+        .poster-card-links {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+        }
+        .poster-card-links a {
+            text-decoration: none;
+            color: #fff;
+            background: #555;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 0.85em;
+        }
+        .poster-card-links a:hover {
+            background: #333;
+        }
+        
+        body { background: #1a1a2e; color: #e0e0e0; }
+        h1 { color: #f0f0f0; letter-spacing: -0.5px; }
+        h2 { color: #f0f0f0; }
+        .category-header { border-radius: 0; border-bottom: 2px solid #555; background-color: transparent !important; color: #e0e0e0; padding: 10px 0; }
+        .strategy-card { border-radius: 2px; box-shadow: none; border: 1px solid #333; border-left: 4px solid; background: #16213e; }
+        .strategy-letter {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 32px; height: 32px; border-radius: 2px;
+            color: #fff; font-weight: bold; font-size: 16px;
+            flex-shrink: 0;
+        }
+        .strategy-description { color: #c0c0c0; }
+        .strategy-definition { color: #888; }
+        .summary { border: 1px solid #333; border-radius: 2px; background: #16213e; }
+        .poster-card { border-radius: 2px; border-color: #333; background: #16213e; }
+        .poster-card-links a { border-radius: 2px; background: #444; }
+        .poster-card-links a:hover { background: #666; }
+        .poster-card-desc { color: #aaa; }
+        a { color: #5ca8bd; }
+        nav a { border-radius: 2px !important; background: #16213e !important; color: #c0c0c0 !important; }
+        nav a:hover { background: #1e2d4d !important; }
+        .style-switcher a, .lang-switcher a { border-color: #444; color: #aaa; }
+        .style-switcher a:hover, .lang-switcher a:hover { background: #16213e; }
+        .style-switcher a.active, .lang-switcher a.active { border-color: #666; background: #16213e; color: #f0f0f0; }
+        .poster-card-left img { border-color: #333; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="style-switcher"><a href="../../en/">Fun</a><a class="active">Biz</a></div>
+            <div class="lang-switcher"><a class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" style="vertical-align:middle"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg> EN</a><a href="../../biz/de/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 5 3" style="vertical-align:middle"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg> DE</a></div>
+        </div>
+        <h1>Software Modernization Strategies</h1>
+        <nav style="text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
+            <a href="#posters" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"> Posters</a>
+            <a href="#book" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"> Book</a>
+            <a href="#author" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"> Author</a>
+            <a href="#support" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"> Support</a>
+        </nav>
+        <div class="summary">
+            <h2>32 approaches to revitalize and right-size your legacy system according to business needs</h2>
+            <p>Explore various approaches to transform and enhance your software systems, categorized by business, development, infrastructure, and enablement strategies!</p>
+            <p><small><i>Collected and enhanced by <a href="https://markusharrer.de">Markus Harrer</i></small></a></p>
+        </div>
+
+        <div class="category">
+            <div class="category-header" style="background-color: #2a2520;">
+                Business (14 strategies)
+            </div>
+            <div class="strategies-grid">
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">In</span>
+                        <span>Ignore It!</span>
+                    </div>
+                    <div class="strategy-description">Leave your system alone as long as it does its job well.</div>
+                    <div class="strategy-definition">Not every legacy system needs attention. Some run reliably, cause no friction, and cost little to operate. Modernization for its own sake wastes resources and introduces risk into something that was working fine. The question is not "can we improve this?" but "should we?"</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">K</span>
+                        <span>Keep It Alive!</span>
+                    </div>
+                    <div class="strategy-description">Keep your legacy system running, but make it a conscious choice, not a habit.</div>
+                    <div class="strategy-definition">Keep It Alive sits between Ignore It and Shut It Down. The system is past its prime and everyone knows it, but replacing or retiring it is not yet feasible. The strategy accepts the ongoing cost of operation as the lesser evil, and focuses on keeping the system stable enough to serve its remaining purpose without investing in improvements it will never need.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">De</span>
+                        <span>Delegate!</span>
+                    </div>
+                    <div class="strategy-description">Hand off what is holding you back and focus on what actually matters.</div>
+                    <div class="strategy-definition">Delegate describes the transfer of responsibility for parts of a software system to an external party, such as a vendor, a managed service provider, or a platform. This approach fits when internal teams lack the capacity, expertise, or strategic interest to handle certain tasks themselves. The goal is to free up internal resources by letting someone else own and operate what is not core to the organization.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">G</span>
+                        <span>Give It Away!</span>
+                    </div>
+                    <div class="strategy-description">Open-source what you can no longer advance alone, and let the community share the load.</div>
+                    <div class="strategy-definition">Give It Away describes the decision to release a software system or component as open source so that an external community can share in its maintenance and further development. It makes sense when the organization can no longer justify the cost of advancing the software alone, but the software still has value to others. The goal is to reduce the burden of solo maintenance while keeping the software alive and potentially benefiting from community contributions.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Si</span>
+                        <span>Sell It!</span>
+                    </div>
+                    <div class="strategy-description">Sell your legacy system to someone for whom it is worth more than it is to you.</div>
+                    <div class="strategy-definition">Sell It describes the transfer of ownership of a legacy system to another organization for whom it holds more strategic or commercial value. It makes sense when the system no longer fits the direction of the organization but still represents a functioning product with an existing user base. The goal is to realize value from the asset while relieving the organization of the ongoing cost and responsibility of maintenance.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Bn</span>
+                        <span>Buy New!</span>
+                    </div>
+                    <div class="strategy-description">Buy a ready-made solution when someone else has already solved your problem.</div>
+                    <div class="strategy-definition">Buy New describes the decision to replace a legacy system with a commercially available off-the-shelf product rather than building or maintaining it in-house. This approach fits when a vendor solution already covers the required functionality well enough and the organization's needs are not significantly different from the general market. The goal is to eliminate the burden of custom development in areas that do not differentiate the business.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Sd</span>
+                        <span>Shut It Down!</span>
+                    </div>
+                    <div class="strategy-description">End your legacy system's operation in a planned, orderly, and drama-free way.</div>
+                    <div class="strategy-definition">Shut It Down describes the planned decommissioning of a legacy system that is no longer needed or viable. This approach fits when the system's users, use cases, or business context have disappeared, or when keeping it running costs more than any remaining value it provides. The goal is to end the system's operation in an orderly way, ensuring data is preserved or migrated and dependencies are cleanly resolved.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Cs</span>
+                        <span>Consolidate It!</span>
+                    </div>
+                    <div class="strategy-description">Replace your zoo of systems with fewer, more manageable units.</div>
+                    <div class="strategy-definition">Consolidate It describes the reduction of redundant systems by merging multiple overlapping solutions into a smaller, more manageable set. This comes into play when an organization has accumulated several systems that serve the same purpose across different teams or departments. The goal is to reduce operational complexity, maintenance overhead, and the cost of keeping parallel systems alive.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Sa</span>
+                        <span>Standardize It!</span>
+                    </div>
+                    <div class="strategy-description">Define how your systems are built, connected, and operated, and end the chaos.</div>
+                    <div class="strategy-definition">Standardize It describes the definition and enforcement of common patterns, conventions, and interfaces across a landscape of systems. It makes sense when different systems have been built in incompatible ways, making integration, onboarding, and maintenance unnecessarily difficult. The goal is to reduce variety in how systems are constructed and operated so that teams can move between them without relearning everything from scratch.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">H</span>
+                        <span>Harmonize It!</span>
+                    </div>
+                    <div class="strategy-description">Align your systems, models, and processes so they work together without friction.</div>
+                    <div class="strategy-definition">Harmonization means making systems that were built independently work together without replacing any of them. Instead of forcing uniformity, you create alignment at the boundaries: shared vocabulary, compatible data exchanges, and agreed-upon outcomes. Different systems stay different, but they stop contradicting each other.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Pn</span>
+                        <span>Partner It!</span>
+                    </div>
+                    <div class="strategy-description">Work with external partners to evolve your system together.</div>
+                    <div class="strategy-definition">Partner It describes working with an external organization to jointly evolve a software system, rather than handling all development internally or delegating it to a vendor. This approach fits when a system exceeds what one organization can reasonably advance alone, but the knowledge, risk, or investment is worth sharing with a partner. The goal is to pool capabilities and distribute the modernization effort across organizations.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Bi</span>
+                        <span>Bring It Back!</span>
+                    </div>
+                    <div class="strategy-description">Take back control of your system when outsourcing costs more than it delivers.</div>
+                    <div class="strategy-definition">Bring It Back describes the decision to end an outsourcing arrangement and return software development to an internal team. This comes into play when the cost, inflexibility, or knowledge loss caused by external vendors outweighs the original benefits of delegation. The goal is to regain direct control over a system that is strategically important to the organization.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Rt</span>
+                        <span>Rethink It!</span>
+                    </div>
+                    <div class="strategy-description">Do not question your system, question the assumptions it was built on.</div>
+                    <div class="strategy-definition">Rethink It describes the fundamental questioning of the assumptions that a legacy system was built on, rather than iterating on the system itself. It makes sense when the original problem the system was designed to solve has changed so significantly that incremental improvement would mean optimizing the wrong thing. The goal is to discover whether the right system is even being built before investing further in modernization.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #d4956a;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#d4956a;">Rm</span>
+                        <span>Remodel It!</span>
+                    </div>
+                    <div class="strategy-description">Align your system's structure with the domain as you understand it today.</div>
+                    <div class="strategy-definition">Software structures encode the assumptions of the people who built them. Over time, those assumptions become outdated: the business evolves, teams reorganize, domain knowledge deepens. Remodeling closes the gap between how the system is structured and how the domain actually works today, making the code easier to read, change, and extend without touching what the system does.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" style="background-color: #1e2a2e;">
+                Development (10 strategies)
+            </div>
+            <div class="strategies-grid">
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">T</span>
+                        <span>Trim it down!</span>
+                    </div>
+                    <div class="strategy-description">Remove what nobody needs anymore and give your system its actual purpose back.</div>
+                    <div class="strategy-definition">Trim It Down describes the deliberate removal of features, dependencies, and code from a legacy system that are no longer needed. This comes into play when a system has grown beyond its actual purpose and the accumulated weight of unused or redundant parts is making it harder to understand and change. The goal is to restore focus by cutting everything that does not actively contribute to the system's core function.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Ip</span>
+                        <span>Improve It!</span>
+                    </div>
+                    <div class="strategy-description">Keep your system fit through continuous, unspectacular work before the debt catches up with you.</div>
+                    <div class="strategy-definition">Improve It describes the ongoing, incremental investment in a legacy system to keep it healthy without pursuing a large-scale transformation. This is typically used when the system is fundamentally sound but has accumulated technical debt, outdated dependencies, or degraded code quality. The goal is to prevent further deterioration by continuously raising internal quality through small, steady improvements.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Cv</span>
+                        <span>Convert it!</span>
+                    </div>
+                    <div class="strategy-description">Keep your system's proven logic and only swap out the technology it lives in.</div>
+                    <div class="strategy-definition">Convert It describes the translation of a legacy system from one technology to another while preserving its existing behavior and business logic. It becomes relevant when the underlying logic of a system is still sound but the language, framework, or runtime it runs on has become a liability. The goal is to move the system to a maintainable technology stack without rewriting the logic it has accumulated over time.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">F</span>
+                        <span>Fork It!</span>
+                    </div>
+                    <div class="strategy-description">Split off part of your system and turn it into a standalone, independent solution.</div>
+                    <div class="strategy-definition">Fork It describes the creation of an independent copy of a codebase that is then developed separately from the original. This comes into play when a part of the system needs to evolve in a fundamentally different direction, such as targeting a new market or use case, without constraining or disrupting the original. The goal is to give a distinct product or use case its own trajectory without the overhead of maintaining a shared codebase for diverging needs.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Rp</span>
+                        <span>Repurpose It!</span>
+                    </div>
+                    <div class="strategy-description">Deploy your system for a new audience instead of maintaining it for a shrinking market.</div>
+                    <div class="strategy-definition">Repurpose It describes the redeployment of an existing system for a new audience, market, or use case that it was not originally designed for. This is typically used when the core capabilities of the system are a good fit for a different context, and the cost of adapting it is lower than building something new. The goal is to extend the useful life of the system by finding a new problem it can solve.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Sv</span>
+                        <span>Salvage It!</span>
+                    </div>
+                    <div class="strategy-description">Keep the valuable components of your legacy system and leave the rest behind.</div>
+                    <div class="strategy-definition">Legacy systems are rarely uniformly bad. Beneath the outdated interfaces and tangled dependencies, there are often components that represent years of hard-won refinement: battle-tested business rules, algorithms tuned against real edge cases, data models that survived countless requirement changes. Salvaging means being selective, taking what has earned its place and leaving the rest behind.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">W</span>
+                        <span>Wrap it!</span>
+                    </div>
+                    <div class="strategy-description">Leave the core untouched and only modernize how your system talks to the outside world.</div>
+                    <div class="strategy-definition">Wrap It describes the addition of modern interfaces and integration layers around a legacy system without changing its internal logic. It becomes relevant when the core of a system still works but the way it communicates with the outside world is outdated, incompatible, or difficult to work with. The goal is to make the system accessible to modern consumers and tooling without touching the code that runs underneath.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Ri</span>
+                        <span>Replace it!</span>
+                    </div>
+                    <div class="strategy-description">Build new when the old system is more burden than value.</div>
+                    <div class="strategy-definition">Replace It describes the complete rewrite of a legacy system from scratch, discarding the existing codebase entirely. It applies when the system has deteriorated beyond incremental improvement, or when technology and architecture are so misaligned with current needs that no other approach works. The goal is to build a new system that serves today's requirements, guided by everything learned from the old one.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">Dv</span>
+                        <span>Divide It!</span>
+                    </div>
+                    <div class="strategy-description">Cut your system along its natural boundaries so one change no longer puts the whole system at risk.</div>
+                    <div class="strategy-definition">Divide It describes the decomposition of a large, tightly coupled system into smaller, independently deployable units. This is typically used when a monolithic system has grown to the point where changes in one area create unacceptable risk or delay in others. The goal is to establish clear boundaries between parts of the system so that each can be developed, deployed, and scaled on its own terms.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #5ca8bd;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#5ca8bd;">E</span>
+                        <span>Extract!</span>
+                    </div>
+                    <div class="strategy-description">Pull the knowledge out of your system before you take the next step.</div>
+                    <div class="strategy-definition">Extract describes the process of recovering and documenting the knowledge embedded in a legacy system before taking further modernization steps. It becomes relevant when the system contains business rules, domain logic, or operational knowledge that exists nowhere else and would be lost if the system were replaced or rewritten without care. The goal is to make implicit knowledge explicit so that it can inform the next step.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" style="background-color: #2a1e22;">
+                Enablement (5 strategies)
+            </div>
+            <div class="strategies-grid">
+
+                <div class="strategy-card" style="border-left-color: #c46b7e;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#c46b7e;">Ug</span>
+                        <span>Upgrade Tools!</span>
+                    </div>
+                    <div class="strategy-description">Bring your tooling up to date so legacy work becomes more efficient.</div>
+                    <div class="strategy-definition">Upgrade Tools describes the modernization of the development toolchain, build systems, testing infrastructure, and operational tooling used to work with a legacy system. This approach works best when the tooling around a system is so outdated that it creates unnecessary friction, slows down feedback loops, or introduces risk in day-to-day work. The goal is to make working with the system less painful without changing the system itself.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #c46b7e;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#c46b7e;">A</span>
+                        <span>Align Strategy!</span>
+                    </div>
+                    <div class="strategy-description">Align your organization's strategic direction toward a realistic approach to legacy.</div>
+                    <div class="strategy-definition">Align Strategy describes establishing a clear, shared direction for how an organization approaches legacy modernization. It applies when modernization efforts are driven by trend, gut feeling, or local initiative rather than by a coherent understanding of what the organization actually needs. The goal is to ensure that modernization investments are made intentionally and in proportion to the real strategic priorities of the business.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #c46b7e;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#c46b7e;">Rs</span>
+                        <span>Reshape Org!</span>
+                    </div>
+                    <div class="strategy-description">Reshape teams, responsibilities, and incentives so legacy work finally works well.</div>
+                    <div class="strategy-definition">Technology alone does not modernize systems, people do. And people work inside organizational structures that either enable or obstruct good work. When team boundaries cut across natural system boundaries, when no one owns the hard parts, or when incentives reward new features over maintenance, modernization stalls regardless of the technical strategy chosen. Reshaping the organization means fixing the structural causes of that friction.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #c46b7e;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#c46b7e;">Us</span>
+                        <span>Upskill People!</span>
+                    </div>
+                    <div class="strategy-description">Invest in the people you already have before investing in new technology.</div>
+                    <div class="strategy-definition">Upskill People describes the deliberate investment in the knowledge and capabilities of the people who work with a legacy system. This approach works best when the team lacks the skills needed to understand, maintain, or modernize the system effectively, and where that gap is a bigger obstacle than the state of the technology itself. The goal is to increase the team's ability to deal with the system before spending further on tooling or rewrites.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #c46b7e;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#c46b7e;">Im</span>
+                        <span>Improve Processes!</span>
+                    </div>
+                    <div class="strategy-description">Improve not the system, but the way your team works with it.</div>
+                    <div class="strategy-definition">Improve Processes describes the modernization of the workflows and collaboration patterns a team uses to work with a legacy system, rather than changing the system itself. This approach works best when slow delivery, poor quality, or high friction are caused by how the team works rather than by the code. The goal is to remove process-level obstacles that prevent the team from working effectively with the system as it is.</div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-header" style="background-color: #1e2825;">
+                Infrastructure (3 strategies)
+            </div>
+            <div class="strategies-grid">
+
+                <div class="strategy-card" style="border-left-color: #6fbfa8;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#6fbfa8;">Ps</span>
+                        <span>Preserve it!</span>
+                    </div>
+                    <div class="strategy-description">Preserve your system so you can still start it when needed, without actively maintaining it.</div>
+                    <div class="strategy-definition">Some systems outlive their operational life but cannot simply be discarded. Legal obligations, audit trails, or historical records may require them to remain accessible for years. Preservation freezes the system in a runnable state, typically through containerization, emulation, or documented environment snapshots, so it can be started when needed without anyone actively maintaining it.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #6fbfa8;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#6fbfa8;">Rf</span>
+                        <span>Replatform it!</span>
+                    </div>
+                    <div class="strategy-description">Give your system a new foundation when the code is still good but what is underneath no longer is.</div>
+                    <div class="strategy-definition">Replatform It describes the migration of a system to a new technical foundation, such as a different runtime, database, or cloud platform, while keeping the application logic largely intact. This is typically used when the infrastructure layer has become a bottleneck or a risk, but the application itself does not need to be rewritten. The goal is to give the system a more sustainable base without the cost and risk of a full replacement.</div>
+                </div>
+
+                <div class="strategy-card" style="border-left-color: #6fbfa8;">
+                    <div class="strategy-title">
+                        <span class="strategy-letter" style="background:#6fbfa8;">Rh</span>
+                        <span>Rehost it!</span>
+                    </div>
+                    <div class="strategy-description">Move your system to a new environment and leave everything else as it is.</div>
+                    <div class="strategy-definition">Rehosting, often called "lift and shift", moves a system to a new infrastructure environment with the application code untouched. It is the fastest modernization move available: no refactoring, no rearchitecting, no retraining. The trade-off is that whatever inefficiencies or constraints exist in the application itself travel with it to the new environment.</div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <h2 id="posters">Posters</h2>
+        <p>Download the poster versions of the modernization strategies as SVG, PDF, or PNG files:</p>
+        <div class="poster-list">
+            <div class="poster-card">
+                <div class="poster-card-left">
+                    <a href="../modernizationstrategies_overview_simple.svg"><img src="../modernizationstrategies_overview_simple_thumb.png" alt="Overview" loading="lazy"></a>
+                    <div class="poster-card-links">
+                        <a href="../modernizationstrategies_overview_simple.svg">SVG</a>
+                        <a href="../modernizationstrategies_overview_simple.pdf">PDF</a>
+                        <a href="../modernizationstrategies_overview_simple.png">PNG</a>
+                    </div>
+                </div>
+                <div class="poster-card-right">
+                    <div class="poster-card-title">Overview</div>
+                    <p class="poster-card-desc">All 32 strategies at a glance, grouped by category.</p>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-card-left">
+                    <a href="../modernizationstrategies_poster_simple.svg"><img src="../modernizationstrategies_poster_simple_thumb.png" alt="Poster" loading="lazy"></a>
+                    <div class="poster-card-links">
+                        <a href="../modernizationstrategies_poster_simple.svg">SVG</a>
+                        <a href="../modernizationstrategies_poster_simple.pdf">PDF</a>
+                        <a href="../modernizationstrategies_poster_simple.png">PNG</a>
+                    </div>
+                </div>
+                <div class="poster-card-right">
+                    <div class="poster-card-title">Poster</div>
+                    <p class="poster-card-desc">Print-ready version in DIN A1 format for your office or team room wall. Each strategy includes a short description.</p>
+                </div>
+            </div>
+            <div class="poster-card">
+                <div class="poster-card-left">
+                    <a href="../modernizationstrategies_cards_simple.pdf"><img src="../modernizationstrategies_cards_simple_thumb.png" alt="Cards" loading="lazy"></a>
+                    <div class="poster-card-links">
+                        
+                        <a href="../modernizationstrategies_cards_simple.pdf">PDF</a>
+                        
+                    </div>
+                </div>
+                <div class="poster-card-right">
+                    <div class="poster-card-title">Cards</div>
+                    <p class="poster-card-desc">32 individual strategy cards in DIN A7 format with short description and definition, perfect for printing and sorting.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="book">Book</h2>
+        <div style="display:flex; gap:24px; align-items:flex-start; flex-wrap:wrap;">
+            <a href="https://leanpub.com/littlestmodernization/" style="flex-shrink:0;"><img src="../../cover_en.png" alt="Book Cover" style="width:180px; border-radius:4px; border:1px solid #ddd;"></a>
+            <div><p>This overview is a sneak peek into my new book <a href="https://leanpub.com/littlestmodernization/">"The Littlest Book of Software Modernization Strategies – 32 approaches to revitalize and right-size your legacy system according to business needs"</a>, which hopefully will be available on leanpub.com soon!</p><p>The book gives you in-depth explanations for each strategy, real-world case studies, practical implementation considerations, honest counterarguments, and the occasional fun aside.</p></div>
+        </div>
+
+        <h2 id="author">Author</h2>
+        Markus Harrer is a software architect and consultant with over 20 years of experience in software development and modernization. He specializes in helping organizations transform their legacy systems into solutions everybody can live with and that meet current business needs. You can find more about him on his website <a href="https://markusharrer.de">markusharrer.de</a> or connect with him on <a href="https://www.linkedin.com/in/markus-harrer/">LinkedIn</a>.
+
+        <h2 id="support">Support</h2>
+        <p>You like this work and want to support it? Here are a few ways:</p><ul><li>Attend one of my <a href="https://markusharrer.de/services/">training courses</a> or <a href="https://www.socreatory.com/en/trainers/markus-harrer">trainings at socreatory</a> on software modernization and architecture.</li><li>Book a <a href="https://markusharrer.de/services/">modernization workshop</a> for your team or organization.</li><li>Buy my book on <a href="https://leanpub.com/littlestmodernization/">Leanpub</a> and feel free to overpay!</li><li>Check out my <a href="https://leanpub.com/u/markusharrer">other books on Leanpub</a>.</li></ul>
+
+        <h2>Sponsor</h2>
+        <p>This work was enabled by <a href="https://www.innoq.com">INNOQ</a>, a software consultancy that helps organizations build and modernize their software systems. Feel free to reach out to us for any software architecture, modernization, or development needs!</p>
+
+        <h2>License</h2>
+        <p>This website&#39;s content and the poster version are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.</p><p>You are free to share and adapt the material for your purposes, as long as you give appropriate credit, provide a link to the license, and indicate if changes were made. You are explicitly allowed to use this material for commercial use as well, as long as you follow the license terms.</p>
+
+        <h2>Feedback</h2>
+        <p>Got feedback or something to discuss? Feel happy to create an <a href="https://github.com/feststelltaste/littlestmodernization/issues/new">issue</a> or write me on <a href="https://www.linkedin.com/in/markus-harrer/">LinkedIn!</a></p>
+
+    </div>
+</body>
+</html>

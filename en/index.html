@@ -6,45 +6,45 @@
     <title>Software Modernization Strategies</title>
     <meta property="og:title" content="Software Modernization Strategies">
     <meta property="og:description" content="32 approaches to revitalize and right-size your legacy system according to business needs">
-    <meta property="og:image" content="https://feststelltaste.github.io/littlestmodernization/strategy_overview_fhd.png">
+    <meta property="og:image" content="https://feststelltaste.github.io/littlestmodernization/modernizationstrategies_overview.png">
     <meta property="og:url" content="https://feststelltaste.github.io/littlestmodernization/en/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Software Modernization Strategies">
     <meta name="twitter:description" content="32 approaches to revitalize and right-size your legacy system according to business needs">
-    <meta name="twitter:image" content="https://feststelltaste.github.io/littlestmodernization/strategy_overview_fhd.png">
+    <meta name="twitter:image" content="https://feststelltaste.github.io/littlestmodernization/modernizationstrategies_overview.png">
     <style>
         body { font-family: Open Sans, sans-serif; margin: 0; padding: 20px; background: #fff; }
         .container { max-width: 1200px; margin: 0 auto; }
         h1 { text-align: center; color: #black; margin-bottom: 30px; hyphens: auto; }
         .category { margin-bottom: 40px; }
-        .category-header { 
-            padding: 15px; 
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-            font-size: 20px; 
-            font-weight: bold; 
-            color: black; 
+        .category-header {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
         }
-        .strategies-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .strategy-card { 
-            background: white; 
-            border-radius: 10px; 
-            padding: 20px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            border-left: 5px solid; 
+        .strategy-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid;
         }
-        .strategy-title { 
-            font-size: 18px; 
-            font-weight: bold; 
-            margin-bottom: 10px; 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
+        .strategy-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .strategy-emoji { font-size: 24px; }
         .strategy-description { color: #000; line-height: 1.4; hyphens: auto; }
@@ -56,14 +56,19 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        .lang-switcher {
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .style-switcher, .lang-switcher {
             font-size: 0.9em;
             display: flex;
             gap: 8px;
-            justify-content: flex-end;
             margin-bottom: 16px;
         }
-        .lang-switcher a {
+        .style-switcher a, .lang-switcher a {
             text-decoration: none;
             color: #555;
             padding: 4px 10px;
@@ -73,10 +78,10 @@
             align-items: center;
             gap: 5px;
         }
-        .lang-switcher a:hover {
+        .style-switcher a:hover, .lang-switcher a:hover {
             background: #f0f0f0;
         }
-        .lang-switcher a.active {
+        .style-switcher a.active, .lang-switcher a.active {
             border-color: #999;
             background: #f0f0f0;
             color: #000;
@@ -145,11 +150,15 @@
         .poster-card-links a:hover {
             background: #333;
         }
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="lang-switcher"><a class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" style="vertical-align:middle"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg> EN</a><a href="../de/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 5 3" style="vertical-align:middle"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg> DE</a></div>
+        <div class="top-bar">
+            <div class="style-switcher"><a class="active">Fun</a><a href="../biz/en/">Biz</a></div>
+            <div class="lang-switcher"><a class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" style="vertical-align:middle"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg> EN</a><a href="../de/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 5 3" style="vertical-align:middle"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg> DE</a></div>
+        </div>
         <h1>Software Modernization Strategies</h1>
         <nav style="text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
             <a href="#posters" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" style="vertical-align: middle; width: 20px; height: 20px;">
@@ -702,7 +711,7 @@
 </svg>
                         <span>Improve Processes!</span>
                     </div>
-                    <div class="strategy-description">De-rust not the system, but the way your team works with it.</div>
+                    <div class="strategy-description">Improve not the system, but the way your team works with it.</div>
                     <div class="strategy-definition">Improve Processes describes the modernization of the workflows and collaboration patterns a team uses to work with a legacy system, rather than changing the system itself. This approach works best when slow delivery, poor quality, or high friction are caused by how the team works rather than by the code. The goal is to remove process-level obstacles that prevent the team from working effectively with the system as it is.</div>
                 </div>
 
@@ -766,11 +775,11 @@
         <div class="poster-list">
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_overview.svg"><img src="../strategy_overview_thumb.png" alt="Overview" loading="lazy"></a>
+                    <a href="../modernizationstrategies_overview.svg"><img src="../modernizationstrategies_overview_thumb.png" alt="Overview" loading="lazy"></a>
                     <div class="poster-card-links">
-                        <a href="../strategy_overview.svg">SVG</a>
-                        <a href="../strategy_overview.pdf">PDF</a>
-                        <a href="../strategy_overview_fhd.png">FHD</a><a href="../strategy_overview_4k.png">4K</a>
+                        <a href="../modernizationstrategies_overview.svg">SVG</a>
+                        <a href="../modernizationstrategies_overview.pdf">PDF</a>
+                        <a href="../modernizationstrategies_overview.png">PNG</a>
                     </div>
                 </div>
                 <div class="poster-card-right">
@@ -780,24 +789,24 @@
             </div>
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_overview_a1.svg"><img src="../strategy_overview_a1_thumb.png" alt="A1 Poster" loading="lazy"></a>
+                    <a href="../modernizationstrategies_poster.svg"><img src="../modernizationstrategies_poster_thumb.png" alt="Poster" loading="lazy"></a>
                     <div class="poster-card-links">
-                        <a href="../strategy_overview_a1.svg">SVG</a>
-                        <a href="../strategy_overview_a1.pdf">PDF</a>
-                        <a href="../strategy_overview_a1_fhd.png">FHD</a><a href="../strategy_overview_a1_4k.png">4K</a>
+                        <a href="../modernizationstrategies_poster.svg">SVG</a>
+                        <a href="../modernizationstrategies_poster.pdf">PDF</a>
+                        <a href="../modernizationstrategies_poster.png">PNG</a>
                     </div>
                 </div>
                 <div class="poster-card-right">
-                    <div class="poster-card-title">A1 Poster</div>
+                    <div class="poster-card-title">Poster</div>
                     <p class="poster-card-desc">Print-ready version in DIN A1 format for your office or team room wall. Each strategy includes a short description.</p>
                 </div>
             </div>
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_cards.pdf"><img src="../strategy_cards_thumb.png" alt="Cards" loading="lazy"></a>
+                    <a href="../modernizationstrategies_cards.pdf"><img src="../modernizationstrategies_cards_thumb.png" alt="Cards" loading="lazy"></a>
                     <div class="poster-card-links">
                         
-                        <a href="../strategy_cards.pdf">PDF</a>
+                        <a href="../modernizationstrategies_cards.pdf">PDF</a>
                         
                     </div>
                 </div>

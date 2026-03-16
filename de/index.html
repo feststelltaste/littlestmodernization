@@ -6,45 +6,45 @@
     <title>Softwaremodernisierungsstrategien</title>
     <meta property="og:title" content="Softwaremodernisierungsstrategien">
     <meta property="og:description" content="Ansätze, um Legacy-Systeme zu revitalisieren und gezielt an neue Business-Anforderungen anzupassen">
-    <meta property="og:image" content="https://feststelltaste.github.io/littlestmodernization/strategy_overview_de_fhd.png">
+    <meta property="og:image" content="https://feststelltaste.github.io/littlestmodernization/modernisierungsstrategien_overview.png">
     <meta property="og:url" content="https://feststelltaste.github.io/littlestmodernization/de/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Softwaremodernisierungsstrategien">
     <meta name="twitter:description" content="Ansätze, um Legacy-Systeme zu revitalisieren und gezielt an neue Business-Anforderungen anzupassen">
-    <meta name="twitter:image" content="https://feststelltaste.github.io/littlestmodernization/strategy_overview_de_fhd.png">
+    <meta name="twitter:image" content="https://feststelltaste.github.io/littlestmodernization/modernisierungsstrategien_overview.png">
     <style>
         body { font-family: Open Sans, sans-serif; margin: 0; padding: 20px; background: #fff; }
         .container { max-width: 1200px; margin: 0 auto; }
         h1 { text-align: center; color: #black; margin-bottom: 30px; hyphens: auto; }
         .category { margin-bottom: 40px; }
-        .category-header { 
-            padding: 15px; 
-            border-radius: 8px; 
-            margin-bottom: 20px; 
-            font-size: 20px; 
-            font-weight: bold; 
-            color: black; 
+        .category-header {
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
         }
-        .strategies-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-        .strategy-card { 
-            background: white; 
-            border-radius: 10px; 
-            padding: 20px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            border-left: 5px solid; 
+        .strategy-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-left: 5px solid;
         }
-        .strategy-title { 
-            font-size: 18px; 
-            font-weight: bold; 
-            margin-bottom: 10px; 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
+        .strategy-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .strategy-emoji { font-size: 24px; }
         .strategy-description { color: #000; line-height: 1.4; hyphens: auto; }
@@ -56,14 +56,19 @@
             margin-bottom: 30px;
             text-align: center;
         }
-        .lang-switcher {
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .style-switcher, .lang-switcher {
             font-size: 0.9em;
             display: flex;
             gap: 8px;
-            justify-content: flex-end;
             margin-bottom: 16px;
         }
-        .lang-switcher a {
+        .style-switcher a, .lang-switcher a {
             text-decoration: none;
             color: #555;
             padding: 4px 10px;
@@ -73,10 +78,10 @@
             align-items: center;
             gap: 5px;
         }
-        .lang-switcher a:hover {
+        .style-switcher a:hover, .lang-switcher a:hover {
             background: #f0f0f0;
         }
-        .lang-switcher a.active {
+        .style-switcher a.active, .lang-switcher a.active {
             border-color: #999;
             background: #f0f0f0;
             color: #000;
@@ -145,11 +150,15 @@
         .poster-card-links a:hover {
             background: #333;
         }
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="lang-switcher"><a href="../en/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" style="vertical-align:middle"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg> EN</a><a class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 5 3" style="vertical-align:middle"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg> DE</a></div>
+        <div class="top-bar">
+            <div class="style-switcher"><a class="active">Fun</a><a href="../biz/de/">Biz</a></div>
+            <div class="lang-switcher"><a href="../en/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 60 40" style="vertical-align:middle"><rect width="60" height="40" fill="#012169"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 L60,40 M60,0 L0,40" stroke="#C8102E" stroke-width="5"/><path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="13"/><path d="M30,0 V40 M0,20 H60" stroke="#C8102E" stroke-width="8"/></svg> EN</a><a class="active"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="16" viewBox="0 0 5 3" style="vertical-align:middle"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#D00"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg> DE</a></div>
+        </div>
         <h1>Software­modernisierungs­strategien</h1>
         <nav style="text-align:center; margin-bottom:24px; display:flex; flex-wrap:wrap; gap:8px; justify-content:center;">
             <a href="#posters" style="text-decoration:none; padding:6px 14px; background:#f0f0f0; border-radius:4px; color:#333; display:inline-flex; align-items:center; gap:6px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32" fill="none" style="vertical-align: middle; width: 20px; height: 20px;">
@@ -702,7 +711,7 @@
 </svg>
                         <span>Prozesse entrosten!</span>
                     </div>
-                    <div class="strategy-description">Entroste nicht das System, sondern die Art, wie dein Team damit arbeitet.</div>
+                    <div class="strategy-description">Verbessere nicht das System, sondern die Art, wie dein Team damit arbeitet.</div>
                     <div class="strategy-definition">Prozesse entrosten beschreibt die Modernisierung der Arbeitsabläufe und Kollaborationsmuster, die ein Team beim Arbeiten mit einem Legacy-System verwendet, anstatt das System selbst zu verändern. Der Ansatz bietet sich an, wenn langsame Lieferzeiten, schlechte Qualität oder hohe Reibung durch die Arbeitsweise des Teams verursacht werden und nicht durch den Code. Ziel ist es, prozessbedingte Hindernisse zu beseitigen, die das Team daran hindern, effektiv mit dem System zu arbeiten.</div>
                 </div>
 
@@ -766,11 +775,11 @@
         <div class="poster-list">
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_overview_de.svg"><img src="../strategy_overview_de_thumb.png" alt="Übersicht" loading="lazy"></a>
+                    <a href="../modernisierungsstrategien_overview.svg"><img src="../modernisierungsstrategien_overview_thumb.png" alt="Übersicht" loading="lazy"></a>
                     <div class="poster-card-links">
-                        <a href="../strategy_overview_de.svg">SVG</a>
-                        <a href="../strategy_overview_de.pdf">PDF</a>
-                        <a href="../strategy_overview_de_fhd.png">FHD</a><a href="../strategy_overview_de_4k.png">4K</a>
+                        <a href="../modernisierungsstrategien_overview.svg">SVG</a>
+                        <a href="../modernisierungsstrategien_overview.pdf">PDF</a>
+                        <a href="../modernisierungsstrategien_overview.png">PNG</a>
                     </div>
                 </div>
                 <div class="poster-card-right">
@@ -780,24 +789,24 @@
             </div>
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_overview_a1_de.svg"><img src="../strategy_overview_a1_de_thumb.png" alt="A1-Poster" loading="lazy"></a>
+                    <a href="../modernisierungsstrategien_poster.svg"><img src="../modernisierungsstrategien_poster_thumb.png" alt="Poster" loading="lazy"></a>
                     <div class="poster-card-links">
-                        <a href="../strategy_overview_a1_de.svg">SVG</a>
-                        <a href="../strategy_overview_a1_de.pdf">PDF</a>
-                        <a href="../strategy_overview_a1_de_fhd.png">FHD</a><a href="../strategy_overview_a1_de_4k.png">4K</a>
+                        <a href="../modernisierungsstrategien_poster.svg">SVG</a>
+                        <a href="../modernisierungsstrategien_poster.pdf">PDF</a>
+                        <a href="../modernisierungsstrategien_poster.png">PNG</a>
                     </div>
                 </div>
                 <div class="poster-card-right">
-                    <div class="poster-card-title">A1-Poster</div>
+                    <div class="poster-card-title">Poster</div>
                     <p class="poster-card-desc">Druckfertige Version im DIN-A1-Format mit Kurzbeschreibung für die Wand im Büro oder Teamraum.</p>
                 </div>
             </div>
             <div class="poster-card">
                 <div class="poster-card-left">
-                    <a href="../strategy_cards_de.pdf"><img src="../strategy_cards_de_thumb.png" alt="Karten" loading="lazy"></a>
+                    <a href="../modernisierungsstrategien_cards.pdf"><img src="../modernisierungsstrategien_cards_thumb.png" alt="Karten" loading="lazy"></a>
                     <div class="poster-card-links">
                         
-                        <a href="../strategy_cards_de.pdf">PDF</a>
+                        <a href="../modernisierungsstrategien_cards.pdf">PDF</a>
                         
                     </div>
                 </div>
